@@ -6,13 +6,18 @@ public class PrintShapeName {
     static Shape square = new Square();
     static Shape rectangle = new Rectangle();
     static Shape pentagon = new Pentagon();
-
-    public static void main(String[] args) {
-        circle.printShapeName();
-        triangle.printShapeName();
-        square.printShapeName();
-        rectangle.printShapeName();
-        pentagon.printShapeName();
+    public void printShape(Shape shape) {
+        System.out.println(shape.getShapeName());
     }
+    public static void main(String[] args) {
+        PrintShapeName print = new PrintShapeName();
+        print.printShape(circle);
+        print.printShape(triangle);
+        print.printShape(square);
+        print.printShape(rectangle);
+        print.printShape(pentagon);
+    }
+
+
 
 }
